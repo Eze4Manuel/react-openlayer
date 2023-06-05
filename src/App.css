@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ol-overlaycontainer-stopevent {
   display: flex;
-  flex-direction: column;
+  align-items: flex-end;
+}
+
+.ol-attribution {
+  display: flex;
+}
+
+.ol-attribution button {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.ol-attribution ul {
+  margin: 0px;
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* The popup */
+.popup {
+  width: 160px;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #555;
+  color: #fff;
+  padding: 8px 10px;
+  position: absolute;
+  z-index: 1;
+  margin-left: -70px;
+}
+
+/* Popup arrow */
+.popup::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 44%;
+  margin-left: -4px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: #666 transparent transparent;
+  transform: rotate(180deg);
 }
